@@ -4,126 +4,138 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>chloéclat | Beauty in Bloom</title>
-  <meta name="description" content="Discover chloéclat, your little ritual of beauty and self-care.">
+  <title>chloéclat — Beauty in Bloom</title>
+  <meta name="description" content="Discover chloéclat, a little world of beauty, self-care and everyday elegance.">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
     body {
-      font-family: Georgia, 'Times New Roman', serif;
-      color: #393128;
       background: #fbf8f3;
+      color: #29251f;
+      font-family: Georgia, 'Times New Roman', serif;
     }
-    header {
-      padding: 25px 20px;
-      text-align: center;
-      border-bottom: 1px solid #e9dfd2;
-    }
-    .logo { font-size: 38px; letter-spacing: 2px; }
-    .butterfly { font-size: 17px; margin-top: 5px; }
-    nav { margin-top: 20px; }
+    header { text-align: center; padding: 30px 15px 22px; }
+    .logo { font-size: clamp(38px, 7vw, 54px); letter-spacing: 1px; }
+    .logo .accent { font-size: 1.22em; font-style: italic; }
+    .butterfly { margin-top: 5px; font-size: 19px; }
+    nav { margin-top: 22px; display: flex; justify-content: center; gap: 27px; }
     nav a {
-      color: #65574b;
-      text-decoration: none;
-      margin: 0 12px;
-      font: 11px Arial, sans-serif;
-      letter-spacing: 2px;
+      color: #63584d; text-decoration: none;
+      font: 10px Arial, sans-serif; letter-spacing: 2px;
       text-transform: uppercase;
     }
     .hero {
-      text-align: center;
-      padding: 85px 20px 95px;
-      background: #eee4d8;
+      min-height: 490px; padding: 90px 20px;
+      display: flex; flex-direction: column;
+      justify-content: center; align-items: center; text-align: center;
+      background: #eee5da;
     }
     .eyebrow {
-      font: 11px Arial, sans-serif;
-      letter-spacing: 3px;
-      text-transform: uppercase;
+      font: 10px Arial, sans-serif;
+      letter-spacing: 3px; text-transform: uppercase;
     }
-    h1 { font-size: clamp(38px, 7vw, 65px); font-weight: normal; margin: 24px 0; }
-    .hero p { font-size: 17px; line-height: 1.9; }
+    h1 { font-size: clamp(43px, 8vw, 76px); font-weight: normal; line-height: 1.13; margin: 25px 0; }
+    .hero p, .description { font-size: 15px; line-height: 1.9; color: #75695e; }
     .button {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 15px 29px;
-      background: #554538;
-      color: white;
-      text-decoration: none;
-      font: 11px Arial, sans-serif;
-      letter-spacing: 2px;
+      display: inline-block; margin-top: 30px; padding: 16px 26px;
+      background: #493d32; color: white; text-decoration: none;
+      font: 10px Arial, sans-serif; letter-spacing: 2px;
       text-transform: uppercase;
     }
-    section { padding: 65px 20px; text-align: center; }
-    h2 { font-size: 32px; font-weight: normal; margin-bottom: 16px; }
-    .intro { color: #82766a; font-size: 15px; line-height: 1.8; }
-    .product {
-      max-width: 430px;
-      margin: 35px auto 0;
-      padding: 40px 22px;
-      background: #f0e8de;
+    section { padding: 80px 20px; text-align: center; }
+    h2 { font-size: clamp(30px, 5vw, 43px); font-weight: normal; margin: 18px 0; }
+    .about { max-width: 620px; margin: auto; }
+    .collection { background: #f3eee7; }
+    .collection-art {
+      max-width: 650px; margin: 35px auto 0;
+      min-height: 230px; padding: 45px 20px;
+      background: #e7dbcd; display: flex;
+      flex-direction: column; justify-content: center; align-items: center;
     }
-    .product-art { font-size: 65px; margin-bottom: 18px; }
-    .product h3 { font-size: 25px; font-weight: normal; margin-bottom: 12px; }
-    .price { margin-top: 18px; font-size: 19px; }
+    .flower { font-size: 49px; margin-bottom: 17px; }
+    .collection-art p { color: #75695e; line-height: 1.8; font-size: 14px; }
+    .contact { padding-bottom: 90px; }
     footer {
-      padding: 35px 20px;
-      text-align: center;
-      border-top: 1px solid #e9dfd2;
-      font: 12px Arial, sans-serif;
-      line-height: 2;
-      color: #82766a;
+      border-top: 1px solid #e7ded3; padding: 30px 15px;
+      text-align: center; color: #796e62;
+      font: 11px Arial, sans-serif; line-height: 2.2;
     }
-    footer a { color: inherit; }
+    footer .footer-logo { font: 25px Georgia, serif; color: #29251f; }
+    @media (max-width: 400px) {
+      nav { gap: 15px; }
+      nav a { font-size: 9px; letter-spacing: 1px; }
+    }
   </style>
 </head>
 <body>
   <header>
-    <div class="logo">chloéclat</div>
+    <div class="logo">chlo<span class="accent">é</span>clat</div>
     <div class="butterfly">୨୧</div>
     <nav>
       <a href="#home">Home</a>
-      <a href="#about">Our Story</a>
-      <a href="#shop">Shop</a>
+      <a href="#story">Our Story</a>
+      <a href="#collection">Collection</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <main>
     <div class="hero" id="home">
-      <div class="eyebrow">A little ritual, a lot of love</div>
-      <h1>Your beauty, your little ritual.</h1>
-      <p>Thoughtfully chosen essentials to make<br>every self-care moment feel special.</p>
-      <a class="button" href="#shop">Discover Our Collection</a>
+      <div class="eyebrow">A little world of beauty</div>
+      <h1>Everyday beauty.<br>Extraordinary you.</h1>
+      <p>Discover your little moments of beauty,<br>
+      self-care and confidence with chloéclat.</p>
+      <a class="button" href="#collection">Discover Our World</a>
     </div>
 
-    <section id="about">
-      <h2>Beauty begins with you.</h2>
-      <p class="intro">
-        Welcome to chloéclat — a little world of beauty,<br>
-        self-care and everyday moments of confidence.
-      </p>
+    <section id="story">
+      <div class="about">
+        <div class="eyebrow">The story of chloéclat</div>
+        <h2>A touch of éclat.</h2>
+        <p class="description">
+          chloéclat was created to celebrate the beauty in
+          everyday rituals. A growing world of thoughtful
+          beauty essentials, little details and moments
+          that make you feel more like yourself.
+        </p>
+      </div>
     </section>
 
-    <section id="shop">
-      <div class="eyebrow">Your self-care journey</div>
-      <h2>Meet Your First Ritual</h2>
-      <p class="intro">Small steps. Beautiful progress.</p>
-
-      <div class="product">
-        <div class="product-art">✿</div>
-        <h3>The Nail Recovery Kit</h3>
-        <p class="intro">
-          Your little companion for healthier-looking nails<br>
-          and a fresh self-care routine.
+    <section class="collection" id="collection">
+      <div class="eyebrow">Something beautiful is growing</div>
+      <h2>Explore our world</h2>
+      <p class="description">
+        Beauty, self-care and little things to fall in love with.
+      </p>
+      <div class="collection-art">
+        <div class="flower">✿</div>
+        <h2 style="font-size:29px">Our collection</h2>
+        <p>New favourites, thoughtful essentials<br>
+        and beautiful little discoveries.</p>
+        <p style="margin-top:15px;letter-spacing:2px;font-size:10px">
+          COMING SOON
         </p>
-        <p class="price">Coming Soon</p>
-        <a class="button" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Follow Our Journey</a>
       </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="eyebrow">Stay a little closer</div>
+      <h2>Let's keep in touch.</h2>
+      <p class="description">
+        Follow our journey and be the first to discover<br>
+        what's blooming next at chloéclat.
+      </p>
+      <a class="button" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+        Follow Our Journey
+      </a>
     </section>
   </main>
 
   <footer>
-    <p>chloéclat ♡ Beauty in Bloom</p>
+    <div class="footer-logo">chloéclat ୨୧</div>
+    <p>Beauty in Bloom</p>
     <p>Made with love.</p>
-    <p>Follow us on Instagram & TikTok</p>
+    <p>© 2026 chloéclat. All rights reserved.</p>
   </footer>
 </body>
 </html>
